@@ -8,32 +8,33 @@
         <link rel="stylesheet" type="text/css" media="screen" href="ProjectMath.css" />
         <script src="ProjectMath.js"></script>
     </head>
+
     <body>
-        <div class="number_converter">
+        <div class="numberconverter">
             <p>
-                <label>Binary</label>
+                <label><b>Binary</b></label>
                 <input id="inputBinary" type="number" placeholder="BIN"
                     oninput="numberConverter(this.id, this.value)"
                     onchange="numberConverter(this.id, this.value)">
             </p>
 
             <p>
-                <label>Decimal</label>
+                <label><b>Decimal</b></label>
                 <input id="inputDecimal" type="number" placeholder="DEC"
                     oninput="numberConverter(this.id, this.value)"
                     onchange="numberConverter(this.id, this.value)">
             </p>
 
             <p>
-                <label>Octal</label>
+                <label><b>Octal</b></label>
                 <input id="inputOctal" type="number" placeholder="OCT"
                     oninput="numberConverter(this.id, this.value)"
                     onchange="numberConverter(this.id, this.value)">
             </p>
 
             <p>
-                <label>Hexadecimal</label>
-                <input id="inputHexadecimal" type="number, letter" placeholder="HEX"
+                <label><b>Hexadecimal</b></label>
+                <input id="inputHexadecimal" type="text" placeholder="HEX"
                     oninput="numberConverter(this.id, this.value)"
                     onchange="numberConverter(this.id, this.value)">
             </p>

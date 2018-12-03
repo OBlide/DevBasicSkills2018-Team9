@@ -9,6 +9,35 @@
         <script src="ProjectMath.js"></script>
     </head>
     <body>
-        Testing testing
+        <div class="number_converter">
+            <p>
+                <label>Binary</label>
+                <input id="inputBinary" type="number" placeholder="BIN"
+                    oninput="numberConverter(this.id, this.value)"
+                    onchange="numberConverter(this.id, this.value)">
+            </p>
+
+            <p>
+                <label>Decimal</label>
+                <input id="inputDecimal" type="number" placeholder="DEC"
+                    oninput="numberConverter(this.id, this.value)"
+                    onchange="numberConverter(this.id, this.value)">
+            </p>
+
+            <p>
+                <label>Octal</label>
+                <input id="inputOctal" type="number" placeholder="OCT"
+                    oninput="numberConverter(this.id, this.value)"
+                    onchange="numberConverter(this.id, this.value)">
+            </p>
+
+            <p>
+                <label>Hexadecimal</label>
+                <input id="inputHexadecimal" type="number, letter" placeholder="HEX"
+                    oninput="numberConverter(this.id, this.value)"
+                    onchange="numberConverter(this.id, this.value)">
+            </p>
+
+        </div>
     </body>
 </html>

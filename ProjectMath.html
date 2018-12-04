@@ -6,39 +6,87 @@
         <title>Project Math</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="ProjectMath.css" />
-        <script src="ProjectMath.js"></script>
+        <script src="PageChanger.js"></script>
+        <script src="NumberConverter.js"></script>
     </head>
 
-    <body>
-        <div class="numberconverter">
-            <p>
-                <label><b>Binary</b></label>
-                <input id="inputBinary" type="number" placeholder="BIN"
-                    oninput="numberConverter(this.id, this.value)"
-                    onchange="numberConverter(this.id, this.value)">
-            </p>
-
-            <p>
-                <label><b>Decimal</b></label>
-                <input id="inputDecimal" type="number" placeholder="DEC"
-                    oninput="numberConverter(this.id, this.value)"
-                    onchange="numberConverter(this.id, this.value)">
-            </p>
-
-            <p>
-                <label><b>Octal</b></label>
-                <input id="inputOctal" type="number" placeholder="OCT"
-                    oninput="numberConverter(this.id, this.value)"
-                    onchange="numberConverter(this.id, this.value)">
-            </p>
-
-            <p>
-                <label><b>Hexadecimal</b></label>
-                <input id="inputHexadecimal" type="text" placeholder="HEX"
-                    oninput="numberConverter(this.id, this.value)"
-                    onchange="numberConverter(this.id, this.value)">
-            </p>
-
+    <body>            
+        <div class="headercontainer">
+            <h1>MUCH MATHEMATICS</h1>
         </div>
+
+        <div class="menubar">
+            <button class="sitelink" onclick="changeSite(event, 'welcomeSite')">Welcome</button>
+            <button class="sitelink" onclick="changeSite(event, 'numberConverter')">Number Converter</button>
+            <button class="sitelink" onclick="changeSite(event, 'numberSystems')">Number Systems</button>
+            <button class="sitelink" onclick="changeSite(event, 'combinatoricsCalculator')">Combinatorics</button>
+            <button class="sitelink" onclick="changeSite(event, 'truthTables')">Truth Tables</button>
+            <button class="sitelink" onclick="changeSite(event, 'randomValues')">Random Values</button>
+            <button class="sitelink" onclick="changeSite(event, 'optionalFunction')">Optional Function</button>
+        </div>
+
+        <div class="designstripe"></div>
+
+            <div class="container">
+
+                <div class="column">
+
+                    <div id="welcomeSite" class="sitebox">
+                        This is a web page to help you learn mathematics.
+                    </div>
+
+                    <div id="numberConverter" class="sitebox">
+
+                        <p>
+                            <label><b>Binary</b></label>
+                            <input id="inputBinary" type="number" placeholder="BIN"
+                                oninput="numberConverter(this.id, this.value)"
+                                onchange="numberConverter(this.id, this.value)">
+                        </p>
+
+                        <p>
+                            <label><b>Decimal</b></label>
+                            <input id="inputDecimal" type="number" placeholder="DEC"
+                                oninput="numberConverter(this.id, this.value)"
+                                onchange="numberConverter(this.id, this.value)">
+                        </p>
+
+                        <p>
+                            <label><b>Octal</b></label>
+                            <input id="inputOctal" type="number" placeholder="OCT"
+                                oninput="numberConverter(this.id, this.value)"
+                                onchange="numberConverter(this.id, this.value)">
+                        </p>
+
+                        <p>
+                            <label><b>Hexadecimal</b></label>
+                            <input id="inputHexadecimal" type="text" placeholder="HEX"
+                                oninput="numberConverter(this.id, this.value)"
+                                onchange="numberConverter(this.id, this.value)">
+                        </p>
+
+                    </div>
+
+                    <div id="numberSystems" class="sitebox">
+
+                    </div>
+
+                    <div id="combinatoricsCalculator" class="sitebox">
+
+                    </div>
+                    
+                    <div id="truthTables" class="sitebox">
+
+                    </div>
+
+                    <div id="randomValues" class="sitebox">
+
+                    </div>
+
+                    <div id="optionalFunction" class="sitebox">
+
+                    </div>
+                </div>
+            </div>
     </body>
 </html>

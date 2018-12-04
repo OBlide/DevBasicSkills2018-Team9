@@ -18,7 +18,7 @@ let countOfClicks = 0
 // An array where we will store objects with the form {number, count}
 
 function addNumber() {
-    const randomNumber=numberRandom(0,10)
+    const randomNumber=numberRandom(0,6)
     myArray.push(randomNumber)
     document.getElementById("randomNumber").textContent=randomNumber;
     countOfClicks++

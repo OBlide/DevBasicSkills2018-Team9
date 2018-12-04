@@ -14,15 +14,18 @@ body
 .menubar
 {
     display: flex;
+    width: 80%;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
     background-color: gray;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .menubar button
 {
+    overflow: hidden;
     color: blue;
     background: lightgray;
     border: none;
@@ -37,7 +40,10 @@ body
 {
     display: flex;
     background-color: blue;
+    margin-left: auto;
+    margin-right: auto;
     height: 5px;
+    width: 80%;
 }
 
 .container
@@ -56,18 +62,25 @@ body
 .sitebox
 {
     display: none;
+    overflow: hidden;
+    flex-direction: column;
     justify-content: center;
     margin-top: 20px;
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
+    padding: 5px;
 }
 
-#numberConverter
+.converterHeader
 {
-    display: flex;
+
 }
 
+.numberConverter
+{ 
+    display: flex;
+    justify-content: center;
 
-
+}
 

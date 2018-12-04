@@ -1,7 +1,73 @@
-.numberconverter
+body
 {
-    background-color: blue;
-    width: 170px;
-    height: 240px;
-    padding: 10px;
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.headercontainer
+{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.menubar
+{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray;
+    padding: 20px;
+}
+
+.menubar button
+{
+    color: blue;
+    background: lightgray;
+    border: none;
+    font: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    
+}
+
+.designstripe
+{
+    display: flex;
+    background-color: blue;
+    height: 5px;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 500px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: gray; 
+
+}
+
+.sitebox
+{
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#numberConverter
+{
+    display: flex;
+}
+
+
+
+

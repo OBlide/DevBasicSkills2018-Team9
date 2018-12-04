@@ -32,38 +32,46 @@
                 <div class="column">
 
                     <div id="welcomeSite" class="sitebox">
-                        This is a web page to help you learn mathematics.
+                        <h2>This is a web page to help you learn mathematics.</h2>
                     </div>
 
                     <div id="numberConverter" class="sitebox">
+                        
+                        <div class="converterHeader">
+                            <h2>This is a number converter that converts numbers automatically to binary, decimal, octal and hexadecimal.</h2>
+                        </div>
 
-                        <p>
-                            <label><b>Binary</b></label>
-                            <input id="inputBinary" type="number" placeholder="BIN"
-                                oninput="numberConverter(this.id, this.value)"
-                                onchange="numberConverter(this.id, this.value)">
-                        </p>
+                        <div class="numberConverter">
 
-                        <p>
-                            <label><b>Decimal</b></label>
-                            <input id="inputDecimal" type="number" placeholder="DEC"
-                                oninput="numberConverter(this.id, this.value)"
-                                onchange="numberConverter(this.id, this.value)">
-                        </p>
+                            <p>
+                                <label><b>Binary</b></label>
+                                <input id="inputBinary" type="number" placeholder="BIN"
+                                    oninput="numberConverter(this.id, this.value)"
+                                    onchange="numberConverter(this.id, this.value)">
+                            </p>
 
-                        <p>
-                            <label><b>Octal</b></label>
-                            <input id="inputOctal" type="number" placeholder="OCT"
-                                oninput="numberConverter(this.id, this.value)"
-                                onchange="numberConverter(this.id, this.value)">
-                        </p>
+                            <p>
+                                <label><b>Decimal</b></label>
+                                <input id="inputDecimal" type="number" placeholder="DEC"
+                                    oninput="numberConverter(this.id, this.value)"
+                                    onchange="numberConverter(this.id, this.value)">
+                            </p>
 
-                        <p>
-                            <label><b>Hexadecimal</b></label>
-                            <input id="inputHexadecimal" type="text" placeholder="HEX"
-                                oninput="numberConverter(this.id, this.value)"
-                                onchange="numberConverter(this.id, this.value)">
-                        </p>
+                            <p>
+                                <label><b>Octal</b></label>
+                                <input id="inputOctal" type="number" placeholder="OCT"
+                                    oninput="numberConverter(this.id, this.value)"
+                                    onchange="numberConverter(this.id, this.value)">
+                            </p>
+
+                            <p>
+                                <label><b>Hexadecimal</b></label>
+                                <input id="inputHexadecimal" type="text" placeholder="HEX"
+                                    oninput="numberConverter(this.id, this.value)"
+                                    onchange="numberConverter(this.id, this.value)">
+                            </p>
+
+                        </div>
 
                     </div>
 

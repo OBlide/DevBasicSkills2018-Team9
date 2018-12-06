@@ -8,6 +8,8 @@
         <link rel="stylesheet" type="text/css" media="screen" href="ProjectMath.css" />
         <script src="PageChanger.js"></script>
         <script src="NumberConverter.js"></script>
+        <script src="combinatoricsCalc.js"></script>
+        <script src="combinatoricsSelector.js"></script>
     </head>
 
     <body>            
@@ -39,6 +41,8 @@
                         
                         <div class="converterHeader">
                             <h2>This is a number converter that converts numbers automatically to binary, decimal, octal and hexadecimal.</h2>
+                            <br>
+                            <h3>Just enter a number in its dedicated slot.</h3>
                         </div>
 
                         <div class="numberConverter">
@@ -81,6 +85,46 @@
 
                     <div id="combinatoricsCalculator" class="sitebox">
 
+                        <div class="combinatoricsHeader">
+
+                            <h2>This is a combinatorics calculator that calculates the possibilities of given sets.</h2>
+                            <br>
+                            <h3>First select if you want to calculate permutations or combinations.</h3>
+
+                            <div class="combSelector">
+                                <button class="calclink" onclick="changeCalc(event, 'permutationsCalc')">Permutations</button>
+                                <button class="calclink" onclick="changeCalc(event, 'combinationsCalc')">Combinations</button>
+                            </div>
+
+                        </div>
+
+                        <div id="permutationsCalc" class="calcbox">
+                            permutations stuff <br> <br>
+                            Permutation without repetition : n! <br> <br>
+                            Permutation with repetition : nPr (n, k), where n is the number of elements in the set and <br>
+                            k is the number of elements in the subset to be chosen. <br>
+
+                            <p>
+                                    <label><b>Elements</b></label>
+                                    <input id="inputElements" type="number" placeholder="ELE"
+                                        oninput="combinatoricsCalc(this.id, this.value)"
+                                        onchange="combinatoricsCalc(this.id, this.value)">
+                            </p>
+
+                            <p>
+                                    <label><b>Subset size</b></label>
+                                    <input id="inputSubset" type="number" placeholder="SUB"
+                                        oninput="combinatoricsCalc(this.id, this.value)"
+                                        onchange="combinatoricsCalc(this.id, this.value)">
+                            </p>
+
+                        </div>
+        
+                        <div id="combinationsCalc" class="calcbox">
+                            combinations stuff <br>
+                            nCr (n, k), where n is the number of elements in the set and k is the number of elements in the subset to be chosen. <br>
+                        </div>
+
                     </div>
                     
                     <div id="truthTables" class="sitebox">
@@ -97,4 +141,5 @@
                 </div>
             </div>
     </body>
+
 </html>

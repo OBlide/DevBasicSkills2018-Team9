@@ -1,7 +1,6 @@
 body
 {
     background-color: lightgray;
-    margin: 0%;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -10,17 +9,16 @@ body
     display: flex;
     justify-content: center;
     padding: 30px;
-    background-color: white;
 }
 
 .menubar
 {
     display: flex;
-    width: 100%;
+    width: 80%;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    background-color: gray;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -28,43 +26,42 @@ body
 .menubar button
 {
     overflow: hidden;
-    color: white;
-    background: orangered;
+    color: blue;
+    background: lightgray;
     border: none;
-    height: 50px;
-    width: 12%;
     font: Arial, Helvetica, sans-serif;
-    font-size: 100%;
+    font-size: 20px;
     margin-left: 5px;
-    margin-right: 5px; 
-    cursor: pointer;  
+    margin-right: 5px;
+    cursor: pointer;
 }
 
-.menubar button:hover 
+.menubar button:hover
 {
-    background-color: brown;
+    color: white;
+
 }
 
 .designstripe
 {
     display: flex;
-    background-color: rgb(173, 103, 38);
+    background-color: blue;
     margin-left: auto;
     margin-right: auto;
     height: 5px;
-    width: 100%;
+    width: 80%;
 }
 
 .container
 {
     display: flex;
     justify-content: center;
-    width: 100%;
-    height: 50%;
+    width: 60%;
+    height: 500px;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: lightgray; 
+    background-color: gray; 
 
 }
 
@@ -78,7 +75,6 @@ body
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
-    padding: 5px;
 }
 
 .converterHeader
@@ -88,118 +84,7 @@ body
 
 .numberConverter
 { 
-    display: flex;
-    justify-content: center;
-}
-
-.calcbox
-{
-    display: none;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-}
-
-.combSelector
-{
-    display: flex;
-    justify-content: center;
-}
-
-.combSelector button
-{
-    overflow: hidden;
-    color: white;
-    background: orangered;
-    border: none;
-    height: 50px;
-    width: 12%;
-    font: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-    margin-left: 5px;
-    margin-right: 5px; 
-    cursor: pointer; 
-}
-
-.combinatoricsHeader
-{
-
-}
-
-.combinatoricsCalculator
-{
-    display: flex;
-    justify-content: center;
-}
-
-.footer
-{
-    font-size: 14px;
     text-align: center;
-    background: orangered;
-    width: 100%;
-    height:100px;
-    margin-bottom:100px;
-    bottom: 0%;
-}
-
-@media (max-width: 800px)
-{
-.menubar
-{
-    display: block;
-    width: 100%;
-    height: 45%;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-    
-.menubar button
-{
-    overflow: hidden;
-    color: white;
-    background: orangered;
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    border: none;
-    height: 50px;
-    width: 100%;
-    font: Arial, Helvetica, sans-serif;
-    font-size: 100%;
-}
-
-.designstripe
-{
     display: flex;
-    background-color: rgb(173, 103, 38);
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: 5px;
-    width: 100%;
 }
 
-.container
-{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 50%;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white; 
-
-}
-
-}

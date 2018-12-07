@@ -100,9 +100,8 @@
                         </div>
 
                         <div id="permutationsCalc" class="calcbox">
-                            permutations stuff <br> <br>
-                            Permutation without repetition : n! <br> <br>
-                            Permutation with repetition : nPr (n, k), where n is the number of elements in the set and <br>
+                            Permutation without replacement : n!, where n is the number of given elements. <br> <br>
+                            Permutation with replacement : nPr (n, k), where n is the number of given elements in the set and <br>
                             k is the number of elements in the subset to be chosen. <br>
 
                             <p>
@@ -122,11 +121,13 @@
 
                             <button class="permAnsw" onclick="permutationFunction()">Calculate</button>
 
+                            <div id="result2"></div>
+
                         </div>
         
                         <div id="combinationsCalc" class="calcbox">
                             combinations stuff <br>
-                            nCr (n, k), where n is the number of elements in the set and k is the number of elements in the subset to be chosen. <br>
+                            nCr (n, k), where n is the number of elements and k is the size of the subsets. <br>
                             
                             <p>
                                 <label><b>Set</b></label>

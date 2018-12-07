@@ -38,6 +38,7 @@ body
     margin-left: 5px;
     margin-right: 5px; 
     cursor: pointer;  
+    box-shadow: 5px 10px 8px #888888;
 }
 
 .menubar button:hover 
@@ -92,19 +93,6 @@ body
     justify-content: center;
 }
 
-.calcbox
-{
-    display: none;
-    overflow: hidden;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 20px;
-    font-size: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-}
-
 .combSelector
 {
     display: flex;
@@ -123,18 +111,44 @@ body
     font-size: 100%;
     margin-left: 5px;
     margin-right: 5px; 
-    cursor: pointer; 
+    cursor: pointer;
+    box-shadow: 5px 10px 8px #888888;
 }
 
 .combinatoricsHeader
 {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.combinatoricsCalculator
+.calcbox
 {
-    display: flex;
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
     justify-content: center;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.calcbox button
+{
+    overflow: hidden;
+    color: white;
+    background: orangered;
+    border: none;
+    height: 50px;
+    width: 12%;
+    font: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    margin-left: 5px;
+    margin-right: 5px; 
+    cursor: pointer; 
+    box-shadow: 5px 10px 8px #888888;
 }
 
 .footer

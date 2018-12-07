@@ -8,7 +8,8 @@
         <link rel="stylesheet" type="text/css" media="screen" href="ProjectMath.css" />
         <script src="PageChanger.js"></script>
         <script src="NumberConverter.js"></script>
-        <script src="combinatoricsCalc.js"></script>
+        <script src="permutationFunction.js"></script>
+        <script src="combinationFunction.js"></script>
         <script src="combinatoricsSelector.js"></script>
     </head>
 
@@ -105,24 +106,35 @@
                             k is the number of elements in the subset to be chosen. <br>
 
                             <p>
-                                    <label><b>Elements</b></label>
-                                    <input id="inputElements" type="number" placeholder="ELE"
-                                        oninput="combinatoricsCalc(this.id, this.value)"
-                                        onchange="combinatoricsCalc(this.id, this.value)">
+                                <label><b>Replacement</b></label>
+                                <input type="checkbox" id="selectReplacement">
                             </p>
 
                             <p>
-                                    <label><b>Subset size</b></label>
-                                    <input id="inputSubset" type="number" placeholder="SUB"
-                                        oninput="combinatoricsCalc(this.id, this.value)"
-                                        onchange="combinatoricsCalc(this.id, this.value)">
+                                <label><b>Elements</b></label>
+                                <input id="inputElements" type="number" placeholder="ELE">
                             </p>
+
+                            <p>
+                                <label><b>Subset size</b></label>
+                                <input id="inputSubset" type="number" placeholder="SUB">
+                            </p>
+
+                            <button class="permAnsw" onclick="permutationFunction()">Calculate</button>
 
                         </div>
         
                         <div id="combinationsCalc" class="calcbox">
                             combinations stuff <br>
                             nCr (n, k), where n is the number of elements in the set and k is the number of elements in the subset to be chosen. <br>
+                            
+                            <p>
+                                <label><b>Set</b></label>
+                                <input type="letter" id="enterSet" placeholder="SET">
+                            </p>
+
+                            <button class="combAnsw" onclick="combinationFunction()">Calculate</button>
+
                         </div>
 
                     </div>

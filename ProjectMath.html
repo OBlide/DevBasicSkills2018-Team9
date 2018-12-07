@@ -10,7 +10,7 @@
        
 </head>
 
-<body>
+<body onload="generate_table()">
 
 
 
@@ -79,22 +79,26 @@
                         </div>
     
                         <div id="numberSystems" class="sitebox">
-    
+
+                            <button onclick="removeTable()">Clear</button>
+
                         </div>
     
                         <div id="combinatoricsCalculator" class="sitebox">
     
                         </div>
                         
-                        <div id="truthTables" class="sitebox">
-    
+                        <div  id="truthTables" class="sitebox">
+
+                        <table id=table_id class=centered></table>
+
                         </div>
     
                         <div id="randomValues" class="sitebox">
                                 <h2>Random Value</h2>
                                 <p>introduction: Press the button to generate a random number. You can generate how many you want.<br> The number will then appear below and depending on if you get the same number, the program will <br>show how many you have received from the same number.</p>
-                                <button id="randomNumber" type="button" onclick="addNumber()".innerHTML>Randomize number</button>
-                                
+                                <button type="button" onclick="addNumber()".innerHTML>Randomize number</button>
+                                <div id="randomNumber"></div>
                                 
                                 <div id="results">
 
@@ -109,12 +113,11 @@
 
 <script src="PageChanger.js"></script>
 <script src="NumberConverter.js"></script>
+<script src="NumberSystem.js"></script>
 <script src="ProjectMath.js"></script>
+<script src="truthTables.js"></script>
+
 
 </body>
-
-<footer class="footer">
-    <p>Joel & Oscar</p>
-</footer>
 
 </html>

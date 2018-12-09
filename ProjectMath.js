@@ -31,7 +31,7 @@ function addNumber() {
     
     
     for (let i = 0; i < myArray.length; i++) {
-      const currentIndex = countArray.push({ number: myArray[i], count: 1 }) - 1
+      const currentIndex = countArray.push({ number: myArray[i], count: -1 }) - 1
     
       for (let j = i; j < myArray.length; j++) {
         if (myArray[i] === myArray[j]) {

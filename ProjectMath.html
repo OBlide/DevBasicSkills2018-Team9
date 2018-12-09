@@ -7,10 +7,14 @@
         <title>Project Math</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" media="screen" href="ProjectMath.css" />
+
+        <script src="NumberSystem.js"></script>
+        <script src="PageChanger.js"></script>
+        <script src="ProjectMath.js"></script>
        
 </head>
 
-<body onload="generate_table()">
+<body onload="numberSystemsTable()">
 
 
 
@@ -80,7 +84,8 @@
     
                         <div id="numberSystems" class="sitebox">
 
-                            <button onclick="removeTable()">Clear</button>
+                            <button onclick="clearNumberTable()">Clear</button>
+                            <table id=numberSystemsTable class=centered></table>
 
                         </div>
     
@@ -111,11 +116,8 @@
     
 </div>
 
-<script src="PageChanger.js"></script>
-<script src="NumberConverter.js"></script>
-<script src="NumberSystem.js"></script>
-<script src="ProjectMath.js"></script>
-<script src="truthTables.js"></script>
+
+
 
 
 </body>

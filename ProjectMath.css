@@ -89,7 +89,16 @@ body
 { 
     display: flex;
     justify-content: center;
+}
 
+table {
+    border-collapse: collapse;
+}
+td,th {
+    border: 1px solid grey;
+    text-align: left;
+    padding: 0.5rem;
+    text-align: left;
 }
 
 @media (max-width: 800px)

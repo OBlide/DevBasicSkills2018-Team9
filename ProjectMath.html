@@ -11,12 +11,11 @@
         <script src="NumberSystem.js"></script>
         <script src="PageChanger.js"></script>
         <script src="ProjectMath.js"></script>
-       
+        <script src="truthTables.js"></script>
+      
 </head>
 
-<body onload="numberSystemsTable()">
-
-
+<body onload="changeSite(event, 'welcomeSite')">
 
         <div class="headercontainer">
                 <h1>MUCH MATHEMATICS</h1>
@@ -25,9 +24,9 @@
             <div class="menubar">
                 <button class="sitelink" onclick="changeSite(event, 'welcomeSite')">Welcome</button>
                 <button class="sitelink" onclick="changeSite(event, 'numberConverter')">Number Converter</button>
-                <button class="sitelink" onclick="changeSite(event, 'numberSystems')">Number Systems</button>
+                <button class="sitelink" onclick="changeSite(event, 'numberSystems'); numberSystemsTable()">Number Systems</button>
                 <button class="sitelink" onclick="changeSite(event, 'combinatoricsCalculator')">Combinatorics</button>
-                <button class="sitelink" onclick="changeSite(event, 'truthTables')">Truth Tables</button>
+                <button class="sitelink" onclick="changeSite(event, 'truthTables'); generate_table()">Truth Tables</button>
                 <button class="sitelink" onclick="changeSite(event, 'randomValues')">Random Values</button>
                 <button class="sitelink" onclick="changeSite(event, 'optionalFunction')">Optional Function</button>
             </div>
@@ -40,6 +39,13 @@
     
                         <div id="welcomeSite" class="sitebox">
                             <h2>This is a web page to help you learn mathematics.</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vestibulum 
+                                aliquet risus eget malesuada. Donec sit amet consequat ex. Nullam ullamcorper, 
+                                diam id mollis egestas, nibh leo mattis tortor, eu eleifend massa odio at nisl. 
+                                Morbi consectetur enim orci, sed finibus mauris porta tempus. Vivamus nibh neque, 
+                                ornare a rhoncus sed, egestas quis nibh. Maecenas eget est mi. Vestibulum eget lectus 
+                                id felis tincidunt hendrerit. Fusce ut turpis orci. Integer ac odio at urna fringilla 
+                                consequat.</p>
                         </div>
     
                         <div id="numberConverter" class="sitebox">
@@ -84,7 +90,7 @@
     
                         <div id="numberSystems" class="sitebox">
 
-                            <button onclick="clearNumberTable()">Clear</button>
+                            <input type="button" id="buttonChange" value="Remove Table" onclick="clearNumberTable()">
                             <table id=numberSystemsTable class=centered></table>
 
                         </div>
@@ -93,13 +99,14 @@
     
                         </div>
                         
-                        <div  id="truthTables" class="sitebox">
+                        <div id="truthTables" class="sitebox">
 
                         <table id=table_id class=centered></table>
 
                         </div>
     
                         <div id="randomValues" class="sitebox">
+
                                 <h2>Random Value</h2>
                                 <p>introduction: Press the button to generate a random number. You can generate how many you want.<br> The number will then appear below and depending on if you get the same number, the program will <br>show how many you have received from the same number.</p>
                                 <button type="button" onclick="addNumber()".innerHTML>Randomize number</button>

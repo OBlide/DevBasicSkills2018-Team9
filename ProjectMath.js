@@ -13,12 +13,12 @@ function numberRandom(min, max) {
     return Math.floor(Math.random() * (min + max));
 }
 
-const myArray = [0,1,2,3,4,5, ,]
+const myArray = [0,1,2,3,4,5, ,];
 let countOfClicks = 1
 // An array where we will store objects with the form {number, count}
 
 function addNumber() {
-    const randomNumber=numberRandom(0,6)
+    const randomNumber=numberRandom(1,5)
     myArray.push(randomNumber)
     document.getElementById("randomNumber").textContent=randomNumber;
     countOfClicks++

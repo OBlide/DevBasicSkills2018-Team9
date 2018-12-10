@@ -2,10 +2,13 @@
 //Clear button
 function clearNumberTable() {
     var numbertable = document.getElementById("numberSystemsTable");
-    if (numbertable.style.display === "none") {
-        numbertable.style.display = "block";
-    } else {
+    var buttonInfo = document.getElementById("buttonChange");
+    if (numbertable.style.display !== "none") {
         numbertable.style.display = "none";
+        buttonInfo.value = "Show Table";
+    } else {
+        numbertable.style.display = "block";
+        buttonInfo.value = "Remove Table";
     }
   }
 
@@ -19,9 +22,9 @@ function numberSystemsTable()
     var i = 0;
 
 for (let i = 0; i < 51; i++){
-        var hex = (100).toString(16);     // "64"
-        var oct = (100).toString(8);      // "144"
-        var bin = (100).toString(2);      // "1100100"
+        var hex = i.toString(16).toUpperCase();   // Hexidecimal
+        var oct = i.toString(8);                  // Octal
+        var bin = i.toString(2);                  // Binary
 
 
     table_content += "<tr><td>" + i + "</td><td>" + bin + "</td><td>" + oct + "</td><td>" + hex + "</td></tr>" ;

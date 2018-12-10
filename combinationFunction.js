@@ -1,10 +1,24 @@
 function combinationFunction()
 {   
-    var givenletter = document.getElementById("enterSet");
-    var givenletters = [];
+    var x = document.getElementById("inputCombElements").value;
+    var y = document.getElementById("inputCombSubset").value;
+    var z = (x - y);
 
-    givenletters.push(givenletter)
+    for (i = x - 1; i > 0; i--) 
+    {
+        x = (x * i);
+    }
 
-    alert(+givenletters.value);
+    for (i = y - 1; i > 0; i--) 
+    {
+        y = (y * i);
+    }
+
+    for (i = z - 1; i > 0; i--) 
+    {
+        z = (z * i);
+    }
+
+    var result3 = (x / (y * z));
+    document.getElementById("result3").innerHTML = "Combinations: " + result3;
 }
-

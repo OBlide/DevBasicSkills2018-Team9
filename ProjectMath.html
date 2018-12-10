@@ -11,9 +11,11 @@
         <script src="permutationFunction.js"></script>
         <script src="combinationFunction.js"></script>
         <script src="combinatoricsSelector.js"></script>
+        <script src="ConverterClearer.js"></script>
     </head>
 
-    <body>            
+    <body onload="changeSite(event, 'welcomeSite')">            
+
         <div class="headercontainer">
             <h1>MUCH MATHEMATICS</h1>
         </div>
@@ -46,38 +48,42 @@
                             <h3>Just enter a number in its dedicated slot.</h3>
                         </div>
 
-                        <div class="numberConverter">
+                            <div class="numberConverter">
 
-                            <p>
-                                <label><b>Binary</b></label>
-                                <input id="inputBinary" type="number" placeholder="BIN"
-                                    oninput="numberConverter(this.id, this.value)"
-                                    onchange="numberConverter(this.id, this.value)">
-                            </p>
+                                <p>
+                                    <label><b>Binary</b></label>
+                                    <input id="inputBinary" type="number" placeholder="BIN"
+                                        oninput="numberConverter(this.id, this.value)"
+                                        onchange="numberConverter(this.id, this.value)">
+                                </p>
 
-                            <p>
-                                <label><b>Decimal</b></label>
-                                <input id="inputDecimal" type="number" placeholder="DEC"
-                                    oninput="numberConverter(this.id, this.value)"
-                                    onchange="numberConverter(this.id, this.value)">
-                            </p>
+                                <p>
+                                    <label><b>Decimal</b></label>
+                                    <input id="inputDecimal" type="number" placeholder="DEC"
+                                        oninput="numberConverter(this.id, this.value)"
+                                        onchange="numberConverter(this.id, this.value)">
+                                </p>
 
-                            <p>
-                                <label><b>Octal</b></label>
-                                <input id="inputOctal" type="number" placeholder="OCT"
-                                    oninput="numberConverter(this.id, this.value)"
-                                    onchange="numberConverter(this.id, this.value)">
-                            </p>
+                                <p>
+                                    <label><b>Octal</b></label>
+                                    <input id="inputOctal" type="number" placeholder="OCT"
+                                        oninput="numberConverter(this.id, this.value)"
+                                        onchange="numberConverter(this.id, this.value)">
+                                </p>
 
-                            <p>
-                                <label><b>Hexadecimal</b></label>
-                                <input id="inputHexadecimal" type="text" placeholder="HEX"
-                                    oninput="numberConverter(this.id, this.value)"
-                                    onchange="numberConverter(this.id, this.value)">
-                            </p>
+                                <p>
+                                    <label><b>Hexadecimal</b></label>
+                                    <input id="inputHexadecimal" type="text" placeholder="HEX"
+                                        oninput="numberConverter(this.id, this.value)"
+                                        onchange="numberConverter(this.id, this.value)">
+                                </p>
 
+                            </div>
+
+                        <div class="clearInputs">
+                            <button id="clearInputs" onclick="ClearConverter()">Clear</button>
                         </div>
-
+                        
                     </div>
 
                     <div id="numberSystems" class="sitebox">
@@ -88,7 +94,7 @@
 
                         <div class="combinatoricsHeader">
 
-                            <h2>This is a combinatorics calculator that calculates the possibilities of given sets.</h2>
+                            <h2>This is a combinatorics calculator that calculates the possibilities and combinations of given elements.</h2>
                             <br>
                             <h3>First select if you want to calculate permutations or combinations.</h3>
 
@@ -101,8 +107,8 @@
 
                         <div id="permutationsCalc" class="calcbox">
                             Permutation without replacement : n!, where n is the number of given elements. <br> <br>
-                            Permutation with replacement : nPr (n, k), where n is the number of given elements in the set and <br>
-                            k is the number of elements in the subset to be chosen. <br>
+                            Permutation with replacement : n^r, where n is the number of given elements in the set and <br>
+                            r is the number of elements in the subset to be chosen. <br>
 
                             <p>
                                 <label><b>Replacement</b></label>
@@ -121,20 +127,28 @@
 
                             <button class="permAnsw" onclick="permutationFunction()">Calculate</button>
 
+                            <div id="result1"></div>
+
                             <div id="result2"></div>
 
                         </div>
         
                         <div id="combinationsCalc" class="calcbox">
-                            combinations stuff <br>
                             nCr (n, k), where n is the number of elements and k is the size of the subsets. <br>
-                            
+
                             <p>
-                                <label><b>Set</b></label>
-                                <input type="letter" id="enterSet" placeholder="SET">
+                                <label><b>Elements</b></label>
+                                <input id="inputCombElements" type="number" placeholder="SUB">
+                            </p>
+
+                            <p>
+                                <label><b>Subset size</b></label>
+                                <input id="inputCombSubset" type="number" placeholder="SUB">
                             </p>
 
                             <button class="combAnsw" onclick="combinationFunction()">Calculate</button>
+
+                            <div id="result3"></div>
 
                         </div>
 
@@ -151,8 +165,8 @@
                     <div id="optionalFunction" class="sitebox">
 
                     </div>
-                </div>
             </div>
+        </div>
     </body>
 
 </html>

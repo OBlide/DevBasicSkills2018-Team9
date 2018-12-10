@@ -1,30 +1,30 @@
 function permutationFunction()
 {   
-    var n = document.getElementById("inputElements").value;
+    var q = document.getElementById("inputElements").value;
     var r = document.getElementById("inputSubset").value;
+    var s = (q - r);
     var checkBox = document.getElementById("selectReplacement");
 
     if (checkBox.checked == true)
     {
-        for (i = n - 1; i > 0; i--) 
-        {
-            n = n * i;
-        }
-
-        var result2 = n;
-        document.getElementById("result2").innerHTML = "Permutations with replacement:" + result2;
-        
+        var result1 = Math.pow(q,r);
+        document.getElementById("result1").innerHTML = "Permutations with replacement: " + result1;
     }
 
     else    
     {
-        for (i = n - 1; i > 0; i--) 
+        for (i = q - 1; i > 0; i--) 
         {
-            n = n * i;
+            q = (q * i);
         }
 
-        var result2 = n;
-        document.getElementById("result2").innerHTML = "Permutations:" + result2;
+        for (i = s - 1; i > 0; i--) 
+        {
+            s = (s * i);
+        }
+
+        var result2 = (q / s);
+        document.getElementById("result2").innerHTML = "Permutations: " + result2;
     }
 
 }

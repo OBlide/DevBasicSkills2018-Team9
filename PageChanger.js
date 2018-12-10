@@ -1,3 +1,5 @@
+// Changes site/tab
+
 function changeSite(evt, siteName) 
 {
     var i, sitebox, sitelink;
@@ -18,5 +20,3 @@ function changeSite(evt, siteName)
     document.getElementById(siteName).style.display = "flex";
     evt.currentTarget.className += " active";
 }; 
-
-// This javascript will change the tabs on the same page.

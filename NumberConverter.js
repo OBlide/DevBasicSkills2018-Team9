@@ -1,4 +1,4 @@
-//Number system conversions
+// Converts numbers
 
 function numberConverter(source, valNum) 
 {
@@ -9,7 +9,7 @@ function numberConverter(source, valNum)
 
     if (source=="inputBinary") 
     {
-        if (inputBinary.value > 0)
+        if (valNum.length > 0)
         {
             var testingBin = (/^[01-]+$/.test(valNum))
         
@@ -24,21 +24,29 @@ function numberConverter(source, valNum)
             {
                 alert("Only binary numbers (0,1), please!")
                 document.getElementById("inputBinary").value="";
+                document.getElementById("inputDecimal").value="";
+                document.getElementById("inputOctal").value="";
+                document.getElementById("inputHexadecimal").value="";
             }
         }
 
-        else
+        if (valNum.length > 50)
         {
-            return
+            alert("Your number is too big.")
+            document.getElementById("inputBinary").value="";
+            document.getElementById("inputDecimal").value="";
+            document.getElementById("inputOctal").value="";
+            document.getElementById("inputHexadecimal").value="";
         }
+
+
     }
 
     if (source=="inputDecimal") 
     {
-        if (inputDecimal.value > 0)
+        if (valNum.length > 0)
         {
-
-            var testingDecimal = (/^[0123456789-]+$/.test(valNum))
+            var testingDecimal = (/^[0-9-]+$/.test(valNum))
 
             if (testingDecimal == 1)
             {
@@ -50,21 +58,29 @@ function numberConverter(source, valNum)
             else
             {
                 alert("Only decimal numbers (0-9), please!")
+                document.getElementById("inputBinary").value="";
                 document.getElementById("inputDecimal").value="";
+                document.getElementById("inputOctal").value="";
+                document.getElementById("inputHexadecimal").value="";
+                
             }
         }
 
-        else
+        if (valNum.length > 50)
         {
-            return
+            alert("Your number is too big.")
+            document.getElementById("inputBinary").value="";
+            document.getElementById("inputDecimal").value="";
+            document.getElementById("inputOctal").value="";
+            document.getElementById("inputHexadecimal").value="";
         }
     }
 
     if (source=="inputOctal") 
     {   
-        if (inputOctal.value > 0)
+        if (valNum.length > 0)
         {
-            var testingOctal = (/^[01234567-]+$/.test(valNum))
+            var testingOctal = (/^[0-7-]+$/.test(valNum))
 
             if (testingOctal == 1)
             {
@@ -76,23 +92,28 @@ function numberConverter(source, valNum)
             else
             {
                 alert("Only octal numbers (0-7), please!")
+                document.getElementById("inputBinary").value="";
+                document.getElementById("inputDecimal").value="";
                 document.getElementById("inputOctal").value="";
+                document.getElementById("inputHexadecimal").value="";
             }
         }
 
-        else
+        if (valNum.length > 50)
         {
-            return
+            alert("Your number is too big.")
+            document.getElementById("inputBinary").value="";
+            document.getElementById("inputDecimal").value="";
+            document.getElementById("inputOctal").value="";
+            document.getElementById("inputHexadecimal").value="";
         }
     }
 
     if (source=="inputHexadecimal") 
     {   
-        var HexTest = inputHexadecimal.toString();
-
-        if (HexTest.length > 0)
+        if (valNum.length > 0)
         {
-            var testingHexadecimal = (/^[0123456789ABCDEFabcdef-]+$/.test(valNum))
+            var testingHexadecimal = (/^[0-9A-F]+$/i.test(valNum))
 
             if (testingHexadecimal == 1)
             {
@@ -104,24 +125,20 @@ function numberConverter(source, valNum)
             else
             {
                 alert("Only hexadecimal numbers (0-F), please!")
+                document.getElementById("inputBinary").value="";
+                document.getElementById("inputDecimal").value="";
+                document.getElementById("inputOctal").value="";
                 document.getElementById("inputHexadecimal").value="";
             }
         }   
 
-        else
+        if (valNum.length > 50)
         {
-            return
+            alert("Your number is too big.")
+            document.getElementById("inputBinary").value="";
+            document.getElementById("inputDecimal").value="";
+            document.getElementById("inputOctal").value="";
+            document.getElementById("inputHexadecimal").value="";
         }
     }
 }
-
-
-//Number system outputs
-
-//Combinatorics
-
-//Truth tables
-
-//Random values
-
-//Our own functionality

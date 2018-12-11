@@ -130,6 +130,13 @@ body
     box-shadow: 5px 10px 8px #888888;
 }
 
+.combinatoricsHeader
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .combSelector
 {
     display: flex;
@@ -144,7 +151,6 @@ body
     border: none;
     height: 50px;
     width: 12%;
-    font: Arial, Helvetica, sans-serif;
     font-size: 100%;
     margin-left: 5px;
     margin-right: 5px; 
@@ -152,11 +158,11 @@ body
     box-shadow: 5px 10px 8px #888888;
 }
 
-.combinatoricsHeader
+.permAnsw
 {
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
 }
 
 .calcbox
@@ -186,6 +192,44 @@ body
     margin-right: 5px; 
     cursor: pointer; 
     box-shadow: 5px 10px 8px #888888;
+}
+
+#optionalFunction
+{
+    text-align: center;
+}
+
+#optionalFunction button
+{
+    overflow: hidden;
+    color: white;
+    background: orangered;
+    border: none;
+    height: 50px;
+    width: 100%;
+    font-size: 100%;
+    margin-left: 5px;
+    margin-right: 5px; 
+    cursor: pointer;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+#optionalFunction input
+{
+    border: 2px solid orangered;
+    background-color: rgba(0,0,0,0  );
+    box-shadow: 5px 10px 8px #888888;
+    text-align: center;
+}
+
+#optionalFunction input:focus
+{
+    border: 2px solid #555;
+}
+
+.numberAnsw
+{
+    margin-top: 10px;
 }
 
 .footer

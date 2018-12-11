@@ -12,6 +12,7 @@
         <script src="combinationFunction.js"></script>
         <script src="combinatoricsSelector.js"></script>
         <script src="ConverterClearer.js"></script>
+        <script src="numberChecker.js"></script>
     </head>
 
     <body onload="changeSite(event, 'welcomeSite')">            
@@ -27,7 +28,7 @@
             <button class="sitelink" onclick="changeSite(event, 'combinatoricsCalculator')">Combinatorics</button>
             <button class="sitelink" onclick="changeSite(event, 'truthTables')">Truth Tables</button>
             <button class="sitelink" onclick="changeSite(event, 'randomValues')">Random Values</button>
-            <button class="sitelink" onclick="changeSite(event, 'optionalFunction')">Optional Function</button>
+            <button class="sitelink" onclick="changeSite(event, 'optionalFunction')">Number Checker</button>
         </div>
 
         <div class="designstripe"></div>
@@ -125,12 +126,18 @@
                                 <input id="inputSubset" type="number" placeholder="SUB">
                             </p>
 
-                            <button class="permAnsw" onclick="permutationFunction()">Calculate</button>
+                            <div class="permAnsw">
 
-                            <div id="result1"></div>
+                                <button class="permAnsw" onclick="permutationFunction()">Calculate</button>
 
-                            <div id="result2"></div>
+                                <div class="permResults">
 
+                                    <div id="result2"></div>
+                                    
+                                    <div id="result1"></div>
+
+                                </div>
+                            </div>
                         </div>
         
                         <div id="combinationsCalc" class="calcbox">
@@ -163,6 +170,21 @@
                     </div>
 
                     <div id="optionalFunction" class="sitebox">
+
+                        <p>
+                            <label><b>Enter a number</b></label>
+                            <input id="inputNumber" type="letter" placeholder="12345">
+                        </p>
+
+                            <button class="checkNumber" onclick="checkNumber(this.id, this.value)">What do you know about my number?</button>
+
+                            <div class="numberAnsw">
+                                <div id="numberAnsw"></div>
+                                <div id="integerAnsw"></div>
+                                <div id="naturalAnsw"></div>
+                                <div id="decimalAnsw"></div>
+                                <div id="squareAnsw"></div>
+                            </div>
 
                     </div>
             </div>

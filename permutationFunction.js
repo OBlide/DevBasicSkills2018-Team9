@@ -1,3 +1,5 @@
+// Calculates permutation
+
 function permutationFunction()
 {   
     var q = document.getElementById("inputElements").value;
@@ -5,26 +7,47 @@ function permutationFunction()
     var s = (q - r);
     var checkBox = document.getElementById("selectReplacement");
 
-    if (checkBox.checked == true)
+    if ( q == 0 )
     {
-        var result1 = Math.pow(q,r);
-        document.getElementById("result1").innerHTML = "Permutations with replacement: " + result1;
+        alert("Please enter a value for your elements.")
     }
 
-    else    
-    {
-        for (i = q - 1; i > 0; i--) 
+    else
+    {   
+        if (checkBox.checked == true)
         {
-            q = (q * i);
+            if ( r == 0 )
+            {
+                alert("Please enter a size for your subset.")
+            }
+
+            else
+            {
+                var result1 = Math.pow(q,r);
+                document.getElementById("result1").innerHTML = "Permutations with replacement: " + result1;
+            }
         }
 
-        for (i = s - 1; i > 0; i--) 
+        else    
         {
-            s = (s * i);
-        }
+            if ( r == 0 )
+            {
+                r == 1
+            }
 
-        var result2 = (q / s);
-        document.getElementById("result2").innerHTML = "Permutations: " + result2;
+            for (i = q - 1; i > 0; i--) 
+            {
+                q = (q * i);
+            }
+
+            for (i = s - 1; i > 0; i--) 
+            {
+                s = (s * i);
+            }
+
+            var result2 = (q / s);
+            document.getElementById("result2").innerHTML = "Permutations: " + result2;
+        }
     }
 
 }

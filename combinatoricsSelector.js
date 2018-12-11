@@ -1,3 +1,5 @@
+// Change site/tab on the combinatorics page
+
 function changeCalc(evt, siteName) 
 {
     var i, calcbox, calclink;
@@ -8,15 +10,17 @@ function changeCalc(evt, siteName)
             calcbox[i].style.display = "none";
         }
 
+        // If tab isn't selected it changes the display to none
+
     calclink = document.getElementsByClassName("calclink");
 
         for (i = 0; i < calclink.length; i++) 
         {
-            calclink[i].className = calclink[i].className.replace(" active", "");
+            calclink[i].className = calclink[i].className.replace("active", "");
         }
 
-    document.getElementById(siteName).style.display = "flex";
-    evt.currentTarget.className += " active";
-}; 
+        // If tab is selected it changes the display to active --> flex
 
-// This javascript will change the tabs on the same page.
+    document.getElementById(siteName).style.display = "flex";
+    evt.currentTarget.className += "active";
+}

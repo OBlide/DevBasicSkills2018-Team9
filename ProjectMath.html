@@ -29,9 +29,9 @@
         <div class="menubar">
             <button class="sitelink" onclick="changeSite(event, 'welcomeSite')">Welcome</button>
             <button class="sitelink" onclick="changeSite(event, 'numberConverter')">Number Converter</button>
-            <button class="sitelink" onclick="changeSite(event, 'numberSystems')">Number Systems</button>
+            <button class="sitelink" onclick="changeSite(event, 'numberSystems'); numberSystemsTable()">Number Systems</button>
             <button class="sitelink" onclick="changeSite(event, 'combinatoricsCalculator')">Combinatorics</button>
-            <button class="sitelink" onclick="changeSite(event, 'truthTables')">Truth Tables</button>
+            <button class="sitelink" onclick="changeSite(event, 'truthTables'); generate_table()">Truth Tables</button>
             <button class="sitelink" onclick="changeSite(event, 'randomValues')">Random Values</button>
             <button class="sitelink" onclick="changeSite(event, 'optionalFunction')">Number Checker</button>
         </div>
@@ -133,7 +133,7 @@
 
                             <div class="permAnsw">
 
-                                <button class="permAnsw" onclick="permutationFunction()">Calculate</button>
+                                <button class="permButton" onclick="permutationFunction()">Calculate</button>
 
                                 <div class="permResults">
 
@@ -158,9 +158,13 @@
                                 <input id="inputCombSubset" type="number" placeholder="SUB">
                             </p>
 
-                            <button class="combAnsw" onclick="combinationFunction()">Calculate</button>
+                            <div class="combAnsw">
 
-                            <div id="result3"></div>
+                                <button class="combButton" onclick="combinationFunction()">Calculate</button>
+
+                                <div id="result3"></div>
+                            
+                            </div>
 
                         </div>
 
@@ -168,18 +172,8 @@
                     
                     <div id="truthTables" class="sitebox">
 
-                            <table  id="table_id" class="centered">
-                                    <tr>
-                                        <td><b>P</b></td>
-                                        <td><b>Q</b></td>
-                                        <td><b>¬P</b></td>
-                                        <td><b>P^Q</b></td>
-                                        <td><b>PvQ</b></td>
-                                        <td><b>P->Q</b></td>
-                                        <td><b>P<->Q</b></td>
-                                        <td><b>P⊕Q</b></td>
-                                    </tr>
-                            </table>
+                        <table  id="table_id" class="centered">
+                        </table>
 
                     </div>
 
@@ -203,15 +197,15 @@
 
                             <button class="checkNumber" onclick="checkNumber(this.id, this.value)">What do you know about my number?</button>
 
-                            <div class="numberAnsw">
-                                <div id="numberAnsw"></div>
-                                <div id="integerAnsw"></div>
-                                <div id="naturalAnsw"></div>
-                                <div id="decimalAnsw"></div>
-                                <div id="squareAnsw"></div>
-                            </div>
-
+                        <div class="numberAnsw">
+                            <div id="numberAnsw"></div>
+                            <div id="integerAnsw"></div>
+                            <div id="naturalAnsw"></div>
+                            <div id="decimalAnsw"></div>
+                            <div id="squareAnsw"></div>
+                        </div>
                     </div>
+                </div>
             </div>
         </div>
     </body>

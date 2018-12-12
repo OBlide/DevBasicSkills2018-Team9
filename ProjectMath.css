@@ -86,8 +86,6 @@ body
     overflow: hidden;
     flex-direction: column;
     justify-content: center;
-    width: 80%;
-    height: 100%;
     margin-top: 20px;
     font-size: 20px;
     margin-left: auto;
@@ -108,7 +106,7 @@ body
 
 .numberConverter input
 {
-    border: 2px solid orangered;
+    border: 2px solid  rgb(105, 164, 212);
     background-color: rgba(0,0,0,0  );
     box-shadow: 5px 10px 8px #888888;
     margin-right: 5px;
@@ -129,16 +127,16 @@ body
 {
     overflow: hidden;
     color: white;
-    background: orangered;
+    background:  rgb(105, 164, 212);
     border: none;
+    float: right;
     height: 50px;
-    width: 12%;
-    font: Arial, Helvetica, sans-serif;
+    width: 200px;
     font-size: 100%;
-    margin-left: 5px;
-    margin-right: 5px; 
-    cursor: pointer;  
-    box-shadow: 5px 10px 8px #888888;
+    margin-bottom: 5%; 
+    align-self: center;
+    cursor: pointer;
+    box-shadow: 2px 2.5px 6px #8888884b;
 }
 
 .combinatoricsHeader
@@ -158,18 +156,46 @@ body
 {
     overflow: hidden;
     color: white;
-    background: orangered;
+    background:  rgb(105, 164, 212);
     border: none;
+    float: right;
     height: 50px;
-    width: 12%;
+    width: 200px;
     font-size: 100%;
-    margin-left: 5px;
-    margin-right: 5px; 
+    margin-bottom: 1%; 
+    margin-left: 5%;
+    margin-right: 5%; 
+    align-self: center;
     cursor: pointer;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 2px 2.5px 6px #8888884b;
 }
 
 .permAnsw
+{
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.permButton button
+{
+    overflow: hidden;
+    color: white;
+    background:  rgb(105, 164, 212);
+    border: none;
+    float: right;
+    height: 50px;
+    width: 200px;
+    font-size: 100%;
+    margin-bottom: 1%; 
+    margin-left: 5%;
+    margin-right: 5%; 
+    align-self: center;
+    cursor: pointer;
+    box-shadow: 2px 2.5px 6px #8888884b;
+}
+
+.combAnsw
 {
     overflow: hidden;
     display: flex;
@@ -191,7 +217,20 @@ body
 
 .calcbox button
 {
-
+    overflow: hidden;
+    color: white;
+    background:  rgb(105, 164, 212);
+    border: none;
+    float: right;
+    height: 50px;
+    width: 200px;
+    font-size: 100%;
+    margin-bottom: 5%; 
+    margin-left: 5%;
+    margin-right: 5%; 
+    align-self: center;
+    cursor: pointer;
+    box-shadow: 2px 2.5px 6px #8888884b;
 }
 table {
     border-collapse: collapse;
@@ -267,20 +306,23 @@ td,th {
 {
     overflow: hidden;
     color: white;
-    background: orangered;
+    background:  rgb(105, 164, 212);
     border: none;
+    float: right;
     height: 50px;
-    width: 100%;
+    width: 200px;
     font-size: 100%;
-    margin-left: 5px;
-    margin-right: 5px; 
+    margin-bottom: 5%; 
+    margin-left: 5%;
+    margin-right: 5%; 
+    align-self: center;
     cursor: pointer;
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 2px 2.5px 6px #8888884b;
 }
 
 #optionalFunction input
 {
-    border: 2px solid orangered;
+    border: 2px solid  rgb(105, 164, 212);
     background-color: rgba(0,0,0,0  );
     box-shadow: 5px 10px 8px #888888;
     text-align: center;

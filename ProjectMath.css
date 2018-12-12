@@ -1,6 +1,6 @@
 body
 {
-    background-color: lightgray;
+    background-color: rgb(233, 233, 233);
     margin: 0%;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -11,6 +11,13 @@ body
     justify-content: center;
     padding: 30px;
     background-color: white;
+}
+
+.logoImage
+{
+    width: 260px;
+    height: 200px;
+    
 }
 
 .menubar
@@ -24,30 +31,36 @@ body
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
 .menubar button
 {
     overflow: hidden;
     color: white;
-    background: orangered;
+    background:rgb(105, 164, 212);
     border: none;
     height: 50px;
     width: 12%;
     font: Arial, Helvetica, sans-serif;
     font-size: 100%;
     margin-left: 5px;
-    margin-right: 5px;   
+    margin-right: 5px; 
+    cursor: pointer;  
+    box-shadow: 2px 2.5px 6px #8888884b;
 }
 
 .menubar button:hover 
 {
-    background-color: brown;
+    background-color: rgb(96, 109, 165);
+}
+
+.menubar button:active 
+{
+    background-color: rgb(96, 109, 165);
 }
 
 .designstripe
 {
     display: flex;
-    background-color: rgb(173, 103, 38);
+    background-color: rgb(105, 164, 212);
     margin-left: auto;
     margin-right: auto;
     height: 5px;
@@ -63,7 +76,7 @@ body
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
-    background-color: lightgray; 
+    background-color:  rgb(233, 233, 233); 
 
 }
 
@@ -101,6 +114,71 @@ td,th {
     text-align: left;
 }
 
+#buttonChange {
+    overflow: hidden;
+    color: white;
+    background:  rgb(105, 164, 212);
+    border: none;
+    float: right;
+    height: 50px;
+    width: 200px;
+    font-size: 100%;
+    margin-bottom: 5%; 
+    align-self: center;
+    cursor: pointer;
+    box-shadow: 2px 2.5px 6px #8888884b;
+}
+
+#randomValuesbutton {
+    overflow: hidden;
+    color: white;
+    background:  rgb(105, 164, 212);
+    border: none;
+    float: right;
+    height: 50px;
+    width: 200px;
+    font-size: 100%;
+    margin-bottom: 1%; 
+    align-self: center;
+    cursor: pointer;
+    box-shadow: 2px 2.5px 6px #8888884b;
+}
+
+#randomNumber {
+    margin:20px;
+    align-self: center;
+}
+
+#results {
+    align-self: center;
+    margin-bottom: 5%;
+}
+
+.randomVal button {
+    overflow: hidden;
+    color: white;
+    background: orangered;
+    border: none;
+    height: 50px;
+    width: 12%;
+    font-size: 100%;
+    margin-left: 5px;
+    margin-right: 5px; 
+    cursor: pointer;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.footer
+{
+    font-size: 14px;
+    text-align: center;
+    background: orangered;
+    width: 100%;
+    height:100px;
+    margin-bottom:100px;
+    bottom: 0%;
+}
+
 @media (max-width: 800px)
 {
 .menubar
@@ -120,15 +198,17 @@ td,th {
 {
     overflow: hidden;
     color: white;
-    background: orangered;
+    background: rgb(105, 164, 212);
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
     border: none;
-    height: 50px;
+    height: 60px;
     width: 100%;
     font: Arial, Helvetica, sans-serif;
     font-size: 100%;
+    cursor: pointer;  
+    box-shadow: 2px 2.5px 6px #8888884b;
 }
 
 .designstripe
@@ -147,7 +227,7 @@ td,th {
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 50%;
+    height: 100%;
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;

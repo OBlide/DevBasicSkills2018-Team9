@@ -11,14 +11,14 @@
         <script src="NumberSystem.js"></script>
         <script src="PageChanger.js"></script>
         <script src="ProjectMath.js"></script>
-        <script src="truthTables.js"></script>
+        
       
 </head>
 
 <body onload="changeSite(event, 'welcomeSite')">
 
         <div class="headercontainer">
-                <h1>MUCH MATHEMATICS</h1>
+                <img src="Project Math Images/MathManiac-Logo.png" class="logoImage">     
             </div>
     
             <div class="menubar">
@@ -101,7 +101,18 @@
                         
                         <div id="truthTables" class="sitebox">
 
-                        <table id=table_id class=centered></table>
+                        <table  id="table_id" class="centered">
+                            <tr>
+                                <td><b>P</b></td>
+                                <td><b>Q</b></td>
+                                <td><b>¬P</b></td>
+                                <td><b>P^Q</b></td>
+                                <td><b>PvQ</b></td>
+                                <td><b>P->Q</b></td>
+                                <td><b>P<->Q</b></td>
+                                <td><b>P⊕Q</b></td>
+                            </tr>
+                        </table>
 
                         </div>
     
@@ -109,7 +120,7 @@
 
                                 <h2>Random Value</h2>
                                 <p>introduction: Press the button to generate a random number. You can generate how many you want.<br> The number will then appear below and depending on if you get the same number, the program will <br>show how many you have received from the same number.</p>
-                                <button type="button" onclick="addNumber()".innerHTML>Randomize number</button>
+                                <input type="button" id="randomValuesbutton" onclick="addNumber()" value="Randomize number">
                                 <div id="randomNumber"></div>
                                 
                                 <div id="results">
@@ -123,7 +134,7 @@
     
 </div>
 
-
+<script src="truthTables.js"></script>
 
 
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Project Math</title>
@@ -13,6 +14,10 @@
         <script src="combinatoricsSelector.js"></script>
         <script src="ConverterClearer.js"></script>
         <script src="numberChecker.js"></script>
+        <script src="NumberSystem.js"></script>
+        <script src="PageChanger.js"></script>
+        <script src="ProjectMath.js"></script>
+        <script src="truthTables.js"></script>
     </head>
 
     <body onload="changeSite(event, 'welcomeSite')">            
@@ -57,21 +62,18 @@
                                         oninput="numberConverter(this.id, this.value)"
                                         onchange="numberConverter(this.id, this.value)">
                                 </p>
-
                                 <p>
                                     <label><b>Decimal</b></label>
                                     <input id="inputDecimal" type="number" placeholder="DEC"
                                         oninput="numberConverter(this.id, this.value)"
                                         onchange="numberConverter(this.id, this.value)">
                                 </p>
-
                                 <p>
                                     <label><b>Octal</b></label>
                                     <input id="inputOctal" type="number" placeholder="OCT"
                                         oninput="numberConverter(this.id, this.value)"
                                         onchange="numberConverter(this.id, this.value)">
                                 </p>
-
                                 <p>
                                     <label><b>Hexadecimal</b></label>
                                     <input id="inputHexadecimal" type="text" placeholder="HEX"
@@ -88,6 +90,9 @@
                     </div>
 
                     <div id="numberSystems" class="sitebox">
+
+                        <input type="button" id="buttonChange" value="Remove Table" onclick="clearNumberTable()">
+                        <table id=numberSystemsTable class=centered></table>
 
                     </div>
 
@@ -163,9 +168,28 @@
                     
                     <div id="truthTables" class="sitebox">
 
+                            <table  id="table_id" class="centered">
+                                    <tr>
+                                        <td><b>P</b></td>
+                                        <td><b>Q</b></td>
+                                        <td><b>¬P</b></td>
+                                        <td><b>P^Q</b></td>
+                                        <td><b>PvQ</b></td>
+                                        <td><b>P->Q</b></td>
+                                        <td><b>P<->Q</b></td>
+                                        <td><b>P⊕Q</b></td>
+                                    </tr>
+
                     </div>
 
                     <div id="randomValues" class="sitebox">
+
+                        <h2>Random Value</h2>
+                        <p>introduction: Press the button to generate a random number. You can generate how many you want.<br> The number will then appear below and depending on if you get the same number, the program will <br>show how many you have received from the same number.</p>
+                        <input type="button" id="randomValuesbutton" onclick="addNumber()" value="Randomize number">
+                        <div id="randomNumber"></div>
+                            
+                        <div id="results"></div>
 
                     </div>
 

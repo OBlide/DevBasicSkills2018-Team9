@@ -1,5 +1,3 @@
-// Changes site/tab on the same page
-
 function changeSite(evt, siteName) 
 {
     var i, sitebox, sitelink;
@@ -9,8 +7,6 @@ function changeSite(evt, siteName)
         {
             sitebox[i].style.display = "none";
         }
-
-        // If tab isn't selected it changes the display to none
 
     sitelink = document.getElementsByClassName("sitelink");
 

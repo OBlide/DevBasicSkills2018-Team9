@@ -9,6 +9,16 @@ const initialValues = [
   
   // This holds the html table
   const table = document.getElementById('table_id')
+  table.innerHTML = `
+  <tr>
+                                <td><b>P</b></td>
+                                <td><b>Q</b></td>
+                                <td><b>¬P</b></td>
+                                <td><b>P^Q</b></td>
+                                <td><b>PvQ</b></td>
+                                <td><b>P->Q</b></td>
+  </tr>
+  `;
   var tableContent = "";
   // With this loop we go through all the rows of the initial values and calculate AND, OR, NAND and NOR
   for (let i = 0; i < initialValues.length; i++) {

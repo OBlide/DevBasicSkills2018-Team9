@@ -17,7 +17,6 @@ body
 {
     width: 260px;
     height: 200px;
-    
 }
 
 .menubar
@@ -86,7 +85,7 @@ body
     overflow: hidden;
     flex-direction: column;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -168,19 +167,49 @@ td,th {
     box-shadow: 5px 10px 8px #888888;
 }
 
-.footer
+#bottomFooter
 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height:6%;
     font-size: 14px;
     text-align: center;
-    background: orangered;
-    width: 100%;
-    height:100px;
-    margin-bottom:100px;
-    bottom: 0%;
+    background: rgb(105, 164, 212);
+}
+
+#insideFooter
+{
+    margin-right: 4%;
+    margin-top: 5px;    
+    color: white;
+    text-align: right;
+    float: right;
 }
 
 @media (max-width: 800px)
 {
+
+body
+{
+    background-color: rgb(255, 255, 255);
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sitebox
+{
+    display: none;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 70px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
 .menubar
 {
     display: block;
@@ -224,15 +253,28 @@ td,th {
 
 .container
 {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
     background-color: white; 
+}
 
+#buttonChange {
+    overflow: hidden;
+    color: white;
+    background:  rgb(105, 164, 212);
+    border: none;
+    float: right;
+    height: 50px;
+    width: 200px;
+    font-size: 100%;
+    margin-top: 10%;
+    margin-bottom: 5%; 
+    align-self: center;
+    cursor: pointer;
+    box-shadow: 2px 2.5px 6px #8888884b;
+}
+
+#bottomFooter
+{
+    display: none;
 }
 
 }

@@ -15,9 +15,8 @@ body
 
 .logoImage
 {
-    width: 260px;
-    height: 200px;
-    
+    width: 210px;
+    height: 150px;
 }
 
 .menubar
@@ -86,11 +85,42 @@ body
     overflow: hidden;
     flex-direction: column;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
+}
+
+.leftSideContent
+{
+    background-color: rgb(255, 255, 255);
+    display: block;
+    float: left;
+    width: 100%;
+    height: 60%;
+    margin-top: 7%;
+    text-align: center;
+    box-shadow: 2px 2.5px 6px #8888884b;
+    display: flex;
+    flex-direction: column;
+}
+
+.mathTitle
+{
+    color: rgb(105, 164, 212);
+    margin-top: 5%;
+    margin-left: 9%;
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+.contentText
+{
+    text-align: left;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 9%;
 }
 
 .converterHeader
@@ -108,7 +138,7 @@ body
 {
     border: 2px solid  rgb(105, 164, 212);
     background-color: rgba(0,0,0,0  );
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 2px 2.5px 6px #8888884b;
     margin-right: 5px;
 }
 
@@ -294,7 +324,7 @@ td,th {
     margin-left: 5px;
     margin-right: 5px; 
     cursor: pointer; 
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 2px 2.5px 6px #8888884b;
 }
 
 #optionalFunction
@@ -324,7 +354,7 @@ td,th {
 {
     border: 2px solid  rgb(105, 164, 212);
     background-color: rgba(0,0,0,0  );
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 2px 2.5px 6px #8888884b;
     text-align: center;
 }
 
@@ -338,19 +368,27 @@ td,th {
     margin-top: 10px;
 }
 
-.footer
+.theFooter
 {
     font-size: 14px;
     text-align: center;
-    background: orangered;
+    background: rgb(105, 164, 212);
     width: 100%;
-    height:100px;
-    margin-bottom:100px;
+    height:7px;
     bottom: 0%;
+    position: fixed;
 }
 
 @media (max-width: 800px)
 {
+
+    body
+{
+    background-color: rgb(255, 255, 255);
+    margin: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .menubar
 {
     display: block;
@@ -383,13 +421,7 @@ td,th {
 
 .designstripe
 {
-    display: flex;
-    background-color: rgb(173, 103, 38);
-    justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: 5px;
-    width: 100%;
+    display: none;
 }
 
 .container
@@ -404,5 +436,33 @@ td,th {
     background-color: white; 
 
 }
+
+.leftSideContent
+{
+    background-color: rgb(255, 255, 255);
+    float: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 5%; 
+}
+
+.mathTitle
+{
+    color: rgb(105, 164, 212);
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+    text-align: left;
+}
+
+.contentText
+{
+    text-align: left;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+}
+
 
 }

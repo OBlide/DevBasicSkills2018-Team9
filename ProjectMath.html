@@ -17,7 +17,7 @@
         <script src="NumberSystem.js"></script>
         <script src="PageChanger.js"></script>
         <script src="ProjectMath.js"></script>
-        <script src="truthTables.js"></script>
+        
     </head>
 
     <body onload="changeSite(event, 'welcomeSite')">            
@@ -43,13 +43,16 @@
                 <div class="column">
 
                     <div id="welcomeSite" class="sitebox">
-                        <h2>This is a web page to help you learn mathematics.</h2>
+                        <div class="leftSideContent">
+                            <h2 class="mathTitle">Math Maniac</h2>
+                            <p class="contentText"><b>The mathematic tool for you!</b><br> Here you can learn a little bit more about computing mathematic.</p>
+                        </div>
                     </div>
 
                     <div id="numberConverter" class="sitebox">
                         
                         <div class="converterHeader">
-                            <h2>This is a number converter that converts numbers automatically to binary, decimal, octal and hexadecimal.</h2>
+                            <h2>This is a number converter that converts numbers <br> automatically to binary, decimal, octal and hexadecimal.</h2>
                             <br>
                             <h3>Just enter a number in its dedicated slot.</h3>
                         </div>
@@ -100,7 +103,7 @@
 
                         <div class="combinatoricsHeader">
 
-                            <h2>This is a combinatorics calculator that calculates the possibilities and combinations of given elements.</h2>
+                            <h2>This is a combinatorics calculator that calculates the possibilities <br> and combinations of given elements.</h2>
                             <br>
                             <h3>First select if you want to calculate permutations or combinations.</h3>
 
@@ -172,7 +175,9 @@
                     
                     <div id="truthTables" class="sitebox">
 
-                        <table  id="table_id" class="centered">
+                        <h2>Truth Table</h2>
+                        <table class="centered">
+                            <div id="truthtables"><script src="truthTables.js"></script></div>    
                         </table>
 
                     </div>
@@ -180,7 +185,7 @@
                     <div id="randomValues" class="sitebox">
 
                         <h2>Random Value</h2>
-                        <p>introduction: Press the button to generate a random number. You can generate how many you want.<br> The number will then appear below and depending on if you get the same number, the program will <br>show how many you have received from the same number.</p>
+                        <p>Introduction: <br> Press the button to generate a random number between 1 - 5. You can generate how many times you want.<br> The number will then appear below and depending on if you get the same number, the program will display <br> how many times you have received the same number.</p>
                         <input type="button" id="randomValuesbutton" onclick="addNumber()" value="Randomize number">
                         <div id="randomNumber"></div>
                             
@@ -208,6 +213,9 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="theFooter"></div>
+        </footer>
     </body>
 
 </html>

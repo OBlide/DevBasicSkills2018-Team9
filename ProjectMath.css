@@ -169,6 +169,32 @@ body
     box-shadow: 2px 2.5px 6px #8888884b;
 }
 
+#permutationsCalc input
+{
+    border: 2px solid  rgb(105, 164, 212);
+    background-color: rgba(0,0,0,0  );
+    box-shadow: 2px 2.5px 6px #8888884b;
+    margin-right: 5px;
+}
+
+#permutationsCalc  input:focus
+{
+    border: 2px solid #555;
+}
+
+#combinationsCalc input
+{
+    border: 2px solid  rgb(105, 164, 212);
+    background-color: rgba(0,0,0,0  );
+    box-shadow: 2px 2.5px 6px #8888884b;
+    margin-right: 5px;
+}
+
+#combinationsCalc  input:focus
+{
+    border: 2px solid #555;
+}
+
 .combinatoricsHeader
 {
 

@@ -11,12 +11,23 @@ function permutationFunction()
 
     if ( q == 0 )
     {
-        alert("Please enter a value for your elements.")
+        alert("Please enter a size for the elements.");
+        document.getElementById("result1").innerHTML = "";        
+        document.getElementById("result2").innerHTML = "";
     }
 
     else if (r == 0)
     {
-        alert("Please enter a size for your subset.")
+        alert("Please enter a size for the subset.");
+        document.getElementById("result1").innerHTML = "";        
+        document.getElementById("result2").innerHTML = "";
+    }
+
+    else if ( r > q > 0)
+    {
+        alert("Please input correct values. (The size of elements have to be larger than the size of subset.)");
+        document.getElementById("result1").innerHTML = "";        
+        document.getElementById("result2").innerHTML = "";
     }
 
     else
@@ -55,6 +66,8 @@ function permutationFunction()
             if(isNaN(result2) == true)
             {
                 alert("Please input correct values.")
+                document.getElementById("result1").innerHTML = "";        
+                document.getElementById("result2").innerHTML = "";
             }
 
             else

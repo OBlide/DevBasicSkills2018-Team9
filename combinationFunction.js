@@ -51,7 +51,7 @@ function combinationFunction()
         if (isNaN(result3) == true || x == 0 || y > x > 0) // Checks that the input is okay
         {
             alert("Please input correct values.")
-            document.getElementById("result3").innerHTML = "" ;
+            document.getElementById("result3").innerHTML = "Combinations: " ;
         }
 
         else // Prints the results

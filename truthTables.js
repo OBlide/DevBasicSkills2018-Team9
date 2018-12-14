@@ -1,63 +1,21 @@
-// These are x and y for each row of the table
-function generate_table(){
-const initialValues = [
-    [0, 0],
-    [0, 1],
-    [1, 0],
-    [1, 1]
-  ]
-  
-// This holds the html table
-  const table = document.getElementById('table_id')
-  table.innerHTML = `
-  <tr>
-                                <td><b>P</b></td>
-                                <td><b>Q</b></td>
-                                <td><b>¬P</b></td>
-                                <td><b>P^Q</b></td>
-                                <td><b>PvQ</b></td>
-                                <td><b>P->Q</b></td>
-  </tr>
-  `;
-  var tableContent = "";
-  // With this loop we go through all the rows of the initial values and calculate AND, OR, NAND and NOR
-  for (let i = 0; i < initialValues.length; i++) {
-      console.log(i + " " + table.innerHTML)
-    const x = initialValues[i][0]
-    const y = initialValues[i][1]
-  
-    // We add this HTML to the table on every iteration
-    // Use Number() to transform from true or false to 1 or 0
-   
-    
-    tableContent += "<tr><td>" + x + "</td><td>" + y + "</td>";
-  
-    if (x && y) {
-      tableContent += "<td>" + 1 + "</td>"
-    } else {
-      tableContent += "<td>" + 0 + "</td>"
+//Looping twice in the beginning and then we put in the right value the rest of the table.
+var truthtables = "";
+truthtables = "<tr><th> P </th>" + "<th> Q </th>" + "<th> ¬P </th>" + "<th> ¬P^Q </th>" + "<th> ¬PvQ </th>" + "<th> P<->Q </th>" + "<th> P⊕Q </th>" + "</tr>";
+ for( var i = 0 ; i < 2 ; i++){
+    for( var j = 0 ; j < 2 ; j++){
+        if( i != 0 && j == 1){
+            truthtables = truthtables + "<td>"+ i + "</td>" + "<td>" + j + "</td>" + "<td>"+ 0 + "</td>" + "<td>" + 0 + "</td>" + "<td>" + 0 + "</td>" + "<td>" + 1 + "</td>" + "<td>" + 0 + "</td>";
+        }
+        if(i == 1 && j == 0){
+            truthtables = truthtables + "<td>"+ i + "</td>" + "<td>" + j + "</td>" + "<td>"+ 0 + "</td>" + "<td>" + 0 + "</td>" + "<td>" + 1 + "</td>" + "<td>" + 0 + "</td>" + "<td>" + 1 + "</td>" + "<tr>";
+        }
+        if(i == 0 && j == 1){
+            truthtables = truthtables + "<td>"+ i + "</td>" + "<td>" + j + "</td>" + "<td>"+ 1 + "</td>" + "<td>" + 1 + "</td>" + "<td>" + 1 + "</td>" + "<td>" + 0 + "</td>" + "<td>" + 1 + "</td>" + "<tr>";
+        }
+        if(i == 0 && j == 0){
+            truthtables = truthtables + "<td>"+ i + "</td>" + "<td>" + j + "</td>" + "<td>"+ 1 + "</td>" + "<td>" + 0 + "</td>" + "<td>" + 0 + "</td>" + "<td>" + 1 + "</td>" + "<td>" + 0 + "</td>" + "<tr>"; 
+        }
     }
-  
-    if (x || y) {
-      tableContent += "<td>" + 1 + "</td>"
-    } else {
-      tableContent += "<td>" + 0 + "</td>"
-    }
-  
-    if (x && y) {
-      tableContent += "<td>" + 0 + "</td>"
-    } else {
-      tableContent += "<td>" + 1 + "</td>"
-    }
-  
-    if (x || y) {
-      tableContent += "<td>" + 0 + "</td>"
-    } else {
-      tableContent += "<td>" + 1 + "</td>"
-    }
-
-    tableContent += "</tr>"
-  }
-
-  table.innerHTML += tableContent
 }
+//Print out
+document.write(truthtables);

@@ -6,47 +6,61 @@ function permutationFunction()
     var r = document.getElementById("inputSubset").value;
     var s = (q - r);
     var checkBox = document.getElementById("selectReplacement");
+    var result1 = Math.pow(q,r);
+    var result2 = (q / s);
 
     if ( q == 0 )
     {
         alert("Please enter a value for your elements.")
     }
 
+    else if (r == 0)
+    {
+        alert("Please enter a size for your subset.")
+    }
+
     else
     {   
         if (checkBox.checked == true)
         {
-            if ( r == 0 )
-            {
-                alert("Please enter a size for your subset.")
-            }
-
-            else
-            {
                 var result1 = Math.pow(q,r);
                 document.getElementById("result1").innerHTML = "Permutations with replacement: " + result1;
-            }
         }
 
         else    
         {
-            if ( r == 0 )
+            if (q == r)
             {
-                r == 1
+                for (i = q - 1; i > 0; i--) 
+                {
+                    q = (q * i);
+                }
+
+                result2 = q
             }
 
-            for (i = q - 1; i > 0; i--) 
+            else
             {
-                q = (q * i);
+                for (i = q - 1; i > 0; i--) 
+                {
+                    q = (q * i);
+                }
+
+                for (i = s - 1; i > 0; i--) 
+                {
+                    s = (s * i);
+                }
             }
 
-            for (i = s - 1; i > 0; i--) 
+            if(isNaN(result2) == true)
             {
-                s = (s * i);
+                alert("Please input correct values.")
             }
 
-            var result2 = (q / s);
-            document.getElementById("result2").innerHTML = "Permutations: " + result2;
+            else
+            {
+                document.getElementById("result2").innerHTML = "Permutations: " + result2;
+            }
         }
     }
 

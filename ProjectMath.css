@@ -171,8 +171,7 @@ body
 
 .combinatoricsHeader
 {
-    display: flex;
-    flex-direction: column;
+
     text-align: center;
 }
 
@@ -435,6 +434,25 @@ td,th {
     margin-right: auto;
     background-color: white; 
 
+}
+
+.numberConverter
+{
+    display: inline-block;
+    box-sizing: border-box;
+
+}
+
+.combinatoricsHeader
+{
+    font-size: 70%;
+
+}
+
+.combSelector button
+{
+    margin-left: 1%;
+    margin-right: 1%; 
 }
 
 .leftSideContent

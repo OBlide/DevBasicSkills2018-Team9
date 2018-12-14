@@ -1,4 +1,4 @@
-// Clears converters
+// A function for a button to clear the converters input fields
 
 function ClearConverter()
 {

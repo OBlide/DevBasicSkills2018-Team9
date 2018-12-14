@@ -1,5 +1,4 @@
-
-//Clear button
+// Clear button
 function clearNumberTable() {
     var numbertable = document.getElementById("numberSystemsTable");
     var buttonInfo = document.getElementById("buttonChange");
@@ -12,7 +11,7 @@ function clearNumberTable() {
     }
   }
 
-//The table
+// The table
 function numberSystemsTable() 
 {
     var table_element = document.getElementById("numberSystemsTable");

@@ -108,7 +108,7 @@ body
 {
     border: 2px solid  rgb(105, 164, 212);
     background-color: rgba(0,0,0,0  );
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 2px 2.5px 6px #8888884b;
     margin-right: 5px;
 }
 
@@ -324,7 +324,7 @@ td,th {
 {
     border: 2px solid  rgb(105, 164, 212);
     background-color: rgba(0,0,0,0  );
-    box-shadow: 5px 10px 8px #888888;
+    box-shadow: 2px 2.5px 6px #8888884b;
     text-align: center;
 }
 

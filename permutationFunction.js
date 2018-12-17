@@ -4,26 +4,24 @@ function permutationFunction()
 {   
     var q = document.getElementById("inputElements").value;
     var r = document.getElementById("inputSubset").value;
-    var s = (q - r);
     var checkBox = document.getElementById("selectReplacement");
-    var result1 = Math.pow(q,r);
-    var result2 = (q / s);
+    var s = (q - r);
 
-    if ( q == 0 ) // Checks if a size is given to the elements
+    if (q == 0) // Checks if a size is given to the elements
     {
         alert("Please enter a size for the elements.");
         document.getElementById("result1").innerHTML = "Permutations: ";        
         document.getElementById("result2").innerHTML = "Permutations with replacement: ";
     }
 
-    else if (r == 0) // Checks if a size is given to the subset
+    if (r == 0) // Checks if a size is given to the subset
     {
         alert("Please enter a size for the subset.");
         document.getElementById("result1").innerHTML = "Permutations: ";        
         document.getElementById("result2").innerHTML = "Permutations with replacement: ";
     }
 
-    else if ( r > q > 0) // Checks that the size of the elements is larger than the size of the subsets
+    if (+r > +q) // Checks that the size of the elements is larger than the size of the subsets
     {
         alert("Please input correct values. (The size of elements have to be larger than the size of subset.)");
         document.getElementById("result1").innerHTML = "Permutations: ";        
@@ -34,12 +32,26 @@ function permutationFunction()
     {   
         if (checkBox.checked == true) // Permutations with replacement
         {
-                var result1 = Math.pow(q,r);
-                document.getElementById("result1").innerHTML = "Permutations with replacement: "+result1;
+            var result2 = Math.pow(q,r);    
+
+            if (+result2 > 999999999999999999999) // Checks if the number is too big
+            {
+                alert("Please input smaller values.")
+                document.getElementById("result1").innerHTML = "Permutations: ";        
+                document.getElementById("result2").innerHTML = "Permutations with replacement: ";
+            }
+
+            else
+            {
+                document.getElementById("result1").innerHTML = "Permutations: ";  
+                document.getElementById("result2").innerHTML = "Permutations with replacement: " +result2 ;
+            }
         }
 
         else // Permutations without replacement
         {
+            var result1 = (q / s);
+
             if (q == r) // If the the elements is the same size as the subset
             {
                 for (i = q - 1; i > 0; i--) 
@@ -47,7 +59,7 @@ function permutationFunction()
                     q = (q * i);
                 }
 
-                result2 = q
+                result1 = q
             }
 
             else
@@ -63,16 +75,25 @@ function permutationFunction()
                 } // Loop to calculate "!subsets"
             }
 
-            if(isNaN(result2) == true) // If the result is not a number
+            if (isNaN(result1) == true) // If the result is not a number
             {
                 alert("Please input correct values.")
                 document.getElementById("result1").innerHTML = "Permutations: ";        
                 document.getElementById("result2").innerHTML = "Permutations with replacement: ";
             }
 
+            
+            if (+result1 > 9999999999999999999999) // Checks if the number is too big
+            {
+                alert("Please input smaller values.")
+                document.getElementById("result1").innerHTML = "Permutations: ";        
+                document.getElementById("result2").innerHTML = "Permutations with replacement: ";
+            }
+
             else // Prints the result
             {
-                document.getElementById("result2").innerHTML = "Permutations: "+result2;
+                document.getElementById("result1").innerHTML = "Permutations: " +result1 ;
+                document.getElementById("result2").innerHTML = "Permutations with replacement: ";        
             }
         }
     }

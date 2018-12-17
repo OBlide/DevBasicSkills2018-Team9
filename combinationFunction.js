@@ -45,7 +45,8 @@ function combinationFunction()
         
         if (tempresult3 == Infinity)
         {
-            result3 = 1
+            result3 = 1;
+            tempresult3 = 1;
         } // On some occasions the program gets infinite value even tough it should be 1
 
         if (isNaN(tempresult3) == true || x == 0 || +y > +x) // Checks that the input is okay
@@ -54,7 +55,7 @@ function combinationFunction()
             document.getElementById("result3").innerHTML = "Combinations: " ;
         }
 
-        else if (+tempresult3 > 99999999999999999999) // Checks if the number is too big
+        else if (tempresult3 > 99999999999999999999) // Checks if the number is too big
         {
             alert("Please input smaller values.");
             document.getElementById("result3").innerHTML = "Combinations: ";        
